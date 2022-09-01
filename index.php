@@ -46,7 +46,7 @@
 
  // fim do if.
 
- $i = 6;
+ $i = 5;
 switch($i) {
     case 0:
        echo "Segunda-feira";
@@ -72,3 +72,6 @@ switch($i) {
        default:
        echo "Número invalido."; 
 }
+
+
+
