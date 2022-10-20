@@ -15,3 +15,4 @@ $arquivo=fopen('alunos.csv','a');//abro o arquivo para append
 fwrite($arquivo, "$nome;$idade;$cpf;$periodo\r\n");
 fclose($arquivo);
 ?>
+//asncoashcioasbnkasc

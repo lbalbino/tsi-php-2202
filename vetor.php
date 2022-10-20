@@ -52,3 +52,4 @@ foreach($alunos as $ind => $val){
 }
 echo "</table>";
 ?>
+//sacnioaciouasbcas

@@ -8,3 +8,4 @@ $pass='';
 //conectamos ao SGBD
 $bd=new PDO($dsn, $user, $pass);
 
+//scacascascasc
