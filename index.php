@@ -1,67 +1,90 @@
 <?php
+$nome = 'Prof. Bono'; //variável
+
+echo "Olá $nome <br>";
+
 //Comentário de linha
-#Comentário de linha 
+
+#Comentário de linha
+
 /*
-Comentário
-de 
+Comentário 
+de
 bloco
 */
-$nome='Aluno, João';
-echo "Olá, $nome"; //INTERPOLAÇÃO
-//FOR//
-for ($i = 1; $i <= 10; $i++){
-    echo "<br>JOAOo";
+
+//DOCUMENTAÇÃO DO PHP FICA EM: https://www.php.net
+
+/////////////////////////////////
+//LOOPINGS 
+
+//FOR
+for( $i = 0 ; $i < 10 ; $i++ ){
+
+    echo "Número da linha $i <br>";
 }
 
-//WHILE;
-$i=0;
-while($i<=10){
-    echo "<br>João";
+//WHILE
+$i = 0;
+while($i < 10){
+
+    echo "Número da linha $i <br>";
     $i++;
 }
 
 //DO WHILE
-$c=0;
+$i = 0;
 do{
-    echo "Joaozinho";
-    $c++;
-}while($c<=10);
-//////////////////////////////////////////
+    echo "Número da linha $i <br>";
+    $i++;
+}while( $i < 10 );
+
+//FIM LOOPINGS 
+
+///////////////////////////////////////
 //CONDICIONAIS
 
-
 //IF
-if(5>10){
-    echo "<br>CINCO É MAIOR DO QUE DEZ";
-}
-else{
-    echo "CINCO NÃO É MAIOR DO QUE 10";
-}
-//FIM CONDICIONAIS
-$Dias=6;
+if( 5 > 10){
 
-//DIAS DA SEMANA//
-switch ($Dias) {
-    case '0':
-        echo "<br>Domingo";
-        break;
-    case '1':
-        echo "<br>Segunda";
-        break;  
-    case '2':
-        echo "<br>Terça";
-        break;
-    case '3':
-        echo "<br>Quarta";
-        break;  
-    case '4':
-        echo "<br>Quinta";
-        break;  
-    case '5':
-        echo "<br>Sexta";
-        break;
-    case '6':
-        echo "<br>Sábado";
-        break;
+    echo "Cinco é maior que dez";
+
+}else{
+
+    echo "Cinco não é maior que dez";
 }
-?>
+
+echo "<br>";
+
+$diaSemana = 1;
+
+switch($diaSemana){
+
+    case 0:
+        echo "Domingo";
+        //comando 2;
+        //comando 3;
+        break;
+    case 1:
+        echo "Segunda";
+        break;
+    case 2:
+        echo "Terça";
+        break;
+    case 3:
+        echo "Quarta";
+        break;
+    case 4:
+        echo "Quinta";
+        break;
+    case 5:
+        echo "Sexta";
+        break;
+    case 6:
+        echo "Sábado";
+        break;
+    default:
+        echo "Número inválido!";
+}
+
+//FIM CONDICIONAIS
