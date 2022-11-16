@@ -1,62 +1,51 @@
 <?php
 
-// <!--  $diasemana[0] = 'domingo';
-//  $diasemana[1] = 'segunda'; -->
+//Vetores
 
-$diadasemana = array (0 =>'domingo',
-1 => 'segunda' ,
-2 => 'terça',
-3 => 'quarta',
-4 => 'quinta',
-5 => 'sexta',
-6 => 'sabado');
+$diaSemana = [  0 => 'Domingo', 1 => 'Segunda', 2 => 'Terça', 
+                3 => 'Quarta', 4 => 'Quinta', 5 => 'Sexta', 
+                6 => 'Sábado'];
 
-// <!-- $diadasemana = array [0 = 'domingo', 1 = 'segunda']; -->
+//Muito importante para depuração do código - var_dump()
+//var_dump($diaSemana);
 
-// echo json_encode($diadasemana);
+$hoje = date('w');
 
-// outra forma de fazer
-// $diadasemana = array (0 =>'domingo', 1 => 'segunda' , 2 => 'terça' , 3 => 'quarta' , 4 => 'quinta', 5 => 'sexta' , 6 => 'sabado');
+echo "Hoje é {$diaSemana[$hoje]}<br><br>"; //interpolação com vetor precisa das {}
 
+$aluno = [  0 => [  'matricula' => 634545, 
+                    'nome' => 'João',
+                    'semestre' => 2],
+            1 => [  'matricula' => 8548, 
+                    'nome' => 'Paulo',
+                    'semestre' => 3],
+            2 => [  'matricula' => 65422, 
+                    'nome' => 'Maria',
+                    'semestre' => 1]];
 
-$aluno =[0 => ['matricula' => 41217,
- 'nome' => 'joao',
-  'semestre' => 2],
-  1 => ['matricula' => 41218,
-   'nome' => 'maria',
-    'semestre' => 3]];
+echo '<table border = "1">
+        <tr>
+            <td>Matrícula</td>
+            <td>Nome</td>
+            <td>Semestre</td>
+        </tr>';
 
+for( $i = 0 ; $i < count($aluno) ; $i++ ){
 
-
-
-// $html = "<table>";
-
-// $html =  "<tr>";
-// $html = "<td>";
-// $html = "<td>";
-// $html = "<td>";
-// $html =  "<tr>";
-
-// $html = "</table>";
-
-echo  "<table border = 1>
-    <tr>
-    <td>matricula</td><td>nome</td><td>semestre</td>
-    </tr>
-";
-
-for($i = 0 ; $i < count($aluno); $i++) {
-    echo " <tr>
-    <td>{$aluno[$i]['matricula']}</td>
-    <td>{$aluno[$i]['nome']}</td>
-     <td>{$aluno[$i]['semestre']}</td>
-    </tr>";
+    echo "  <tr>
+                <td> {$aluno[$i]['matricula']} </td>
+                <td> {$aluno[$i]['nome']} </td>
+                <td> {$aluno[$i]['semestre']} </td>
+            </tr>";
 }
 
-echo "</table>";
-// $hoje = date('w');
-// var_dump($hoje);
-// echo "hoje é {$diadasemana[$hoje]}";
+foreach( $aluno as $ind => $val ){
 
+        echo "  <tr>
+                        <td>{$val['matricula']}</td>
+                        <td>{$val['nome']}</td>
+                        <td>{$val['semestre']}</td>
+                </tr>";
+}
 
-// var_dump($aluno);
+echo '</table>';
